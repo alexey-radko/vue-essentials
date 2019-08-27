@@ -1,0 +1,14 @@
+// Notes for seting up the project with Vue js  and Webpack
+
+// allows to install vue js globally 
+npm install -g vue-cli
+
+
+// create a project
+vue init webpack-simple vue-essentials
+
+npm run dev
+
+// install dependences 
+
+npm i --save  animate.css bootstrap jquery popper.js vue-router
