@@ -1,10 +1,12 @@
 <template>
+<div> 
+
  <transition-group
     tag="div"
     enter-active-class="animated fadeInRight"
     leave-active-class = "animated fadeOutRight"
 >
-        <div class="products" v-for="(item, index) in products" :key="index"
+    <div class="products" v-for="(item, index) in products" :key="index"
         v-if="item.price<=Number(maximum)">
 
     <div class="card" style="width:400px">
@@ -29,6 +31,7 @@
 
 </div>
 </transition-group>
+</div>
 </template>
 
 <script>
