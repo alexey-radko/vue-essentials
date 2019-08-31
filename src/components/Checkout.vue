@@ -30,6 +30,7 @@
           <td class="text-right">{{Number(item.qty * item.product.price)}}</td>
         </tr>
       </tbody>
+       <router-link class="btn btn-sm btn-outline-info text-dark" to="/">Keep Shopping</router-link>
     </table>
   </div>
 </template>

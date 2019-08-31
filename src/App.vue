@@ -3,26 +3,29 @@
 
 
     <div id="app" class='container mt-200'> 
-      <checkout class="mt-5"
+      <router-view
+      class="mt-5"
       :cartTotal="cartTotal"
       :cards="cards"
       @add= "addItem"
       @delete= "deleteItem"
       
-      ></checkout>
-      <artikels
+     
+      
       @toggle="toggleSliderStatus"
-      @delete="deleteItem"
-      @add="addItem"
-      :cards="cards"
+    
+    
+    
+     
       :cartQty="cartQty"
-      :cartTotal="cartTotal"
+     
+     
       :sliderStatus="sliderStatus" 
       :maximum.sync="maximum"
       :products="products"  
       
-      
-      ></artikels>
+      >
+      </router-view>
     
     </div>
   

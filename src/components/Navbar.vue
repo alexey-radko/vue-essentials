@@ -33,6 +33,7 @@
                 class="badge badge-danger text-white mg-10"
               >–</a>
             </div>
+             <router-link class="btn btn-sm btn-outline-info text-dark" to="/checkout">checkout</router-link>
           </div>
         </div>
       </li>
