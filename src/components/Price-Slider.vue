@@ -8,10 +8,10 @@
       <div class="text-center" :class="sliderState">
         <label for="formMax">Maximum</label>
         <input id="formMax" class="input-group-sm text-center" type="text" 
-        @change="$emit('update:maximum', maxAm)"
+        @change="$parent.$emit('update:maximum', maxAm)"
         v-model="maxAm"  />
         <input type="range" class="form-control-range" min="50" max="200"
-        @input="$emit('update:maximum', maxAm)"
+        @input="$parent.$emit('update:maximum', maxAm)"
          v-model="maxAm" />
       </div>
     </div>

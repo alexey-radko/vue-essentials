@@ -23,7 +23,7 @@
                 :value="Number(item.price)"
                 ></price>
             </h4>    
-            <button type="button" class="btn btn-primary" @click="$emit('add', item)" >+</button>
+            <button type="button" class="btn btn-primary" @click="$parent.$emit('add', item)" >+</button>
             <a href="#" class="btn btn-primary">Buy</a>
         </div>
     </div>

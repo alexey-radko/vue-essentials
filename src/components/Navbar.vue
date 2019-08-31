@@ -5,7 +5,7 @@
         <a class="nav-link btn" href="#" v-on:click="showList()">Go back</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link btn" href="#" @click="$emit('toggle')"  >Filtern</a>
+        <a class="nav-link btn" href="#" @click="$parent.$emit('toggle')"  >Filtern</a>
       </li>
       <li class="nav-item">
         <div class="dropdown">
@@ -29,7 +29,7 @@
               <b>{{ Number(index.product.price) * index.qty }}</b>
               <a
                 href="#"
-                v-on:click.stop="$emit('delete', item)"
+                v-on:click.stop="$parent.$emit('delete', item)"
                 class="badge badge-danger text-white mg-10"
               >–</a>
             </div>

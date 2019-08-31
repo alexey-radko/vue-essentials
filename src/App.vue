@@ -3,36 +3,40 @@
 
 
     <div id="app" class='container mt-200'> 
-    <navbar :cards="cards"
-    @toggle="toggleSliderStatus"
-    @delete="deleteItem"
-    :cartQty="cartQty"
-    :cartTotal="cartTotal"
+      <checkout class="mt-5"
+      :cartTotal="cartTotal"
+      :cards="cards"
+      @add= "addItem"
+      @delete= "deleteItem"
+      
+      ></checkout>
+      <artikels
+      @toggle="toggleSliderStatus"
+      @delete="deleteItem"
+      @add="addItem"
+      :cards="cards"
+      :cartQty="cartQty"
+      :cartTotal="cartTotal"
+      :sliderStatus="sliderStatus" 
+      :maximum.sync="maximum"
+      :products="products"  
+      
+      
+      ></artikels>
     
-    
-    > </navbar> 
-    <h1 class ="mt-5 mb-4">My Shop</h1>
-    <p class="animated fadeInRight"> See what we have for you!</p>
-    
-    <price-slider :sliderStatus="sliderStatus" :maximum.sync="maximum" > </price-slider>
-    <product-list :products="products" :maximum="maximum" @add="addItem" > </product-list>
     </div>
   
   
 </template>
 
 <script>
-import Navbar from "./components/Navbar"
-import Price from "./components/Price"
-import ProductList from "./components/Products"
-import PriceSlider from "./components/Price-Slider"
+import Artikels from "./components/Artikels"
+import Checkout from "./components/Checkout"
 export default {
   name: 'app',
   components:{
-    Price,
-    ProductList,
-    PriceSlider,
-    Navbar
+   Artikels,
+   Checkout
   },
   data () {
     return {
