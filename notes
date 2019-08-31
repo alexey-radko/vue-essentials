@@ -1,5 +1,7 @@
 // Notes for seting up the project with Vue js  and Webpack
 
+
+
 // allows to install vue js globally 
 npm install -g vue-cli
 
